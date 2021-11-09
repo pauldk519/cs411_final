@@ -14,6 +14,14 @@ function App() {
   const [newLocation, setnewLocation] = useState('');
   const [search, setSearch] = useState(null);
   const [query, setquery] = useState('');
+  const [restName, setrestName] = useState('');
+  const [restLoc, setrestLoc] = useState('');
+  const [allergenName, setallergenName] = useState('');
+  const [allergey, setallergy] = useState('');
+  const [calories, setcalories] = useState('');
+  const [foodName, setfoodName] = useState('');
+  const [ingredientName, setingredientName] = useState('');
+  const [price, setprice] = useState('');
 
   const insertCRUD = () => {
      Axios.post('http://localhost:3002/api/insert', {
@@ -42,6 +50,12 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var x = document.getElementById("searchDiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
   };
 
   const advancedquery1CRUD = () => {
@@ -50,6 +64,12 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var x = document.getElementById("aq1Div");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
   };
 
   const advancedquery2CRUD = () => {
@@ -58,6 +78,12 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var x = document.getElementById("aq2Div");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
   };
 
 
@@ -107,7 +133,7 @@ function App() {
         } }/><br></br>
         <button onClick = {putCRUD}>PUT</button>
       </div>
-      
+
       <div>
         <h1>Advanced query buttons below</h1>
         <button onClick = {advancedquery1CRUD}>advanced query1</button>
@@ -121,13 +147,35 @@ function App() {
           setquery(e.target.value);
         } }/><br></br>
         <button onClick={searchCRUD}>SEARCH</button>
-
+        <div id="searchDiv">
         {search && search.map((tuples, index) => (
           <div key = {index}>
            <p>Restaurant Name: {tuples.RestaurantName}</p>
            <p>Restaurant Location: {tuples.RestaurantLocation}</p>
            </div>
         ))}
+        </div>
+        <div id="aq1Div">
+        {search && search.map((tuples, index) => (
+           <div key = {index}>
+           <p>Allergen Name: {tuples.AllergenName}</p>
+           <p>Allergy: {tuples.Allergy}</p>
+           <p>Calories: {tuples.Calories}</p>
+           <p>Food Name: {tuples.FoodName}</p>
+           <p>Ingredient Name: {tuples.IngredientName}</p>
+           <p>Price: {tuples.Price}</p>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
+           <p>Restaurant Location: {tuples.RestaurantLocation}</p>
+           </div>
+        ))}
+        </div>
+        <div id="aq2Div">
+        {search && search.map((tuples, index) => (
+          <div key = {index}>
+           <p>Food Name: {tuples.FoodName}</p>
+           </div>
+        ))}
+        </div>
       </div>
     </div>
   );
