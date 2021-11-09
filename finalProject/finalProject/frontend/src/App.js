@@ -50,11 +50,17 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
-    var x = document.getElementById("searchDiv");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    if (z.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
     } else {
         x.style.display = "none";
+        y.style.display = "none";
+        // z.style.display = "none";
     }
   };
 
@@ -64,11 +70,17 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
-    var x = document.getElementById("aq1Div");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    if (y.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
     } else {
         x.style.display = "none";
+        // y.style.display = "none";
+        z.style.display = "none";
     }
   };
 
@@ -79,10 +91,16 @@ function App() {
       console.log(search)
     })
     var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
     } else {
-        x.style.display = "none";
+        // x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
     }
   };
 
