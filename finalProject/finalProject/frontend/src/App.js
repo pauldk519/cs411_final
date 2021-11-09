@@ -44,6 +44,22 @@ function App() {
     })
   };
 
+  const advancedquery1CRUD = () => {
+    console.log("Running advanced query 1")
+    Axios.get('http://localhost:3002/api/advq1').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+  };
+
+  const advancedquery2CRUD = () => {
+    console.log("Running advanced query 2")
+    Axios.get('http://localhost:3002/api/advq2').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+  };
+
 
 
   return (
@@ -91,10 +107,12 @@ function App() {
         } }/><br></br>
         <button onClick = {putCRUD}>PUT</button>
       </div>
-
-      <h1>Advanced query buttons below</h1>
-      <button>advanced query1</button>
-      <button>advanced query2</button>
+      
+      <div>
+        <h1>Advanced query buttons below</h1>
+        <button onClick = {advancedquery1CRUD}>advanced query1</button>
+        <button onClick = {advancedquery2CRUD}>advanced query2</button>
+      </div>
 
       <div>
         <h1> SEARCH fields below </h1>
