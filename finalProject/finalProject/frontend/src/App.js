@@ -126,6 +126,8 @@ function App() {
         <button onClick={deleteCRUD}>DELETE</button>
       </div>
 
+      {/* <a href="/Insert/">Insert</a> */}
+
       <div>
         <h1> UPDATE fields below</h1>
         <label>Target Restaurant Name:</label>

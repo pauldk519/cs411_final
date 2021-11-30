@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Insert from './Insert';
 
 ReactDOM.render(
   <App />,
+  <Insert />,
   document.getElementById('root')
 );
 
