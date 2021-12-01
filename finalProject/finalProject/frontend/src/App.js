@@ -105,14 +105,22 @@ function App() {
   };
 
 
+  const divStyle = {
+    margin: '30px',
+    border: '5px solidblack',
+    fontFamily: 'verdana'
+    
+  };
 
   return (
     <div className = "App">
-      <div>
-        <body style="font-family:verdana">
-        <h1>Peanut Table</h1>
-        </body>
-      </div>
+      <body style={divStyle}>
+        <div style = {divStyle}>
+
+          <h1>Peanut Table</h1>
+        </div>
+      </body>
+
       {/* <h1>CRUD Applications</h1> */}
       <h1>INSERT and DELETE below</h1>
 
