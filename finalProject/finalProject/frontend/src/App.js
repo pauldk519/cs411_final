@@ -138,10 +138,10 @@ function App() {
 
 
   const divStyle = {
-    margin: '30px',
-    border: '5px solidblack',
-    fontFamily: 'verdana'
-    
+    margin: '50px',
+    border: '20px solidblack',
+    fontFamily: 'verdana',
+    textAlign: 'center'
   };
 
   return (
@@ -154,55 +154,57 @@ function App() {
       </body>
 
       {/* <h1>CRUD Applications</h1> */}
-      <h1>INSERT and DELETE below</h1>
+      <div style = {divStyle}>
+        <h1>Insert and Delete Restaurant Name and Location</h1>
 
-      <div className = "Form">
-        <label>Restaurant Name:</label>
+        <div className = "Form">
+          <label>Restaurant Name:</label>
 
-        <input type = "text" name = "restaurantName" onChange={(e) => {
-          setrestaurantName(e.target.value);
-        } } />
+          <input type = "text" name = " restaurantName " onChange={(e) => {
+            setrestaurantName(e.target.value);
+          } } />
 
-        <label>Restaurant Location:</label>
-        <input type = "text" name = "restaurantLocation" onChange={(e) => {
-          setrestaurantLocation(e.target.value);
-        } }/>
-        <button onClick={insertCRUD}>INSERT</button>
-        <button onClick={deleteCRUD}>DELETE</button>
+          <label>Restaurant Location:</label>
+          <input type = "text" name = " restaurantLocation " onChange={(e) => {
+            setrestaurantLocation(e.target.value);
+          } }/><br></br><br></br>
+          <button onClick={insertCRUD}>INSERT</button>
+          <button onClick={deleteCRUD}>DELETE</button>
+        </div>
       </div>
-
       {/* <a href="/Insert/">Insert</a> */}
 
-      <div>
-        <h1> UPDATE fields below</h1>
+      <div style={divStyle}>
+        <h1> Update Restaurant Name and Location</h1>
         <label>Target Restaurant Name:</label>
 
         <input type = "text" name = "targetName" onChange={(e) => {
           settargetName(e.target.value);
-        } } /><br></br>
+        } } />
 
         <label>Target Restaurant Location:</label>
         <input type = "text" name = "targetLocation" onChange={(e) => {
           settargetLocation(e.target.value);
-        } }/><br></br>
+        } }/><br></br><br></br>
 
         <label>New Restaurant Name:</label>
 
         <input type = "text" name = "newName" onChange={(e) => {
           setnewName(e.target.value);
-        } } /><br></br>
+        } } />
 
         <label>New Restaurant Location:</label>
         <input type = "text" name = "newLocation" onChange={(e) => {
           setnewLocation(e.target.value);
-        } }/><br></br>
+        } }/><br></br><br></br>
         <button onClick = {putCRUD}>PUT</button>
       </div>
 
       <div>
         <h1>Advanced query buttons below</h1>
-        <button onClick = {advancedquery1CRUD}>advanced query1</button>
-        <button onClick = {advancedquery2CRUD}>advanced query2</button>
+        <button onClick = {advancedquery1CRUD}>Advanced Query 1</button>
+        <button onClick = {advancedquery2CRUD}>Advanced Query 2</button>
+        <button onClick = {advancedquery3CRUD}>Advanced Query 3</button>
       </div>
 
       <div>
@@ -240,12 +242,14 @@ function App() {
            <p>Food Name: {tuples.FoodName}</p>
            </div>
         ))}
+        </div>
         <div id="aq3Div">
         {search && search.map((tuples, index) => (
           <div key = {index}>
            <p>Restaurant Name: {tuples.RestaurantName}</p>
            </div>
         ))}
+        
         </div>
       </div>
     </div>
