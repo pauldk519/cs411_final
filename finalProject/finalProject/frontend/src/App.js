@@ -54,16 +54,19 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
     if (z.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
+        a.style.display = "none";
     } else {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         // z.style.display = "none";
+        a.style.display = "none";
     }
   };
 
@@ -77,16 +80,19 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
     if (y.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
+        a.style.display = "none";
     } else {
         w.style.display = "none";
         x.style.display = "none";
         // y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
   };
 
@@ -100,20 +106,23 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
     if (x.style.display === "none") {
         w.style.display = "none";
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     } else {
         w.style.display = "none";
         // x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
   };
   
-    const advancedquery3CRUD = () => {
+  const advancedquery3CRUD = () => {
     console.log("Running advanced query 3")
     Axios.get('http://localhost:3002/api/advq3').then((response) => {
       setSearch(response.data)
@@ -123,18 +132,102 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
     if (w.style.display === "none") {
         w.style.display = "block";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
+
     } else {
         // w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
   };
+
+  const intermediatenewtable = () => {
+    console.log("Getting intermediate NewTable")
+    Axios.get('http://localhost:3002/api/newtable').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+    var w = document.getElementById("aq3Div");
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
+    if (a.style.display === "none") {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "block";
+
+    } else {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+
+  }
+
+  const intermediatesoytable = () => {
+    console.log("Getting intermediate SoyTable")
+    Axios.get('http://localhost:3002/api/soytable').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+    var w = document.getElementById("aq3Div");
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
+    if (a.style.display === "none") {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "block";
+
+    } else {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+
+  }
+  const intermediatemilktable = () => {
+    console.log("Getting intermediate MilkTable")
+    Axios.get('http://localhost:3002/api/milktable').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+    var w = document.getElementById("aq3Div");
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    var a = document.getElementById("intermediateDiv")
+    if (a.style.display === "none") {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "block";
+
+    } else {
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+
+  }
 
 
   const divStyle = {
@@ -200,15 +293,19 @@ function App() {
         <button onClick = {putCRUD}>PUT</button>
       </div>
 
-      <div>
+      <div style = {divStyle}>
         <h1>Advanced query buttons below</h1>
-        <button onClick = {advancedquery1CRUD}>Advanced Query 1</button>
-        <button onClick = {advancedquery2CRUD}>Advanced Query 2</button>
-        <button onClick = {advancedquery3CRUD}>Advanced Query 3</button>
+        <button onClick = {advancedquery1CRUD}>Advanced Query 1</button><br></br>
+        <button onClick = {advancedquery2CRUD}>Advanced Query 2</button><br></br>
+        <button onClick = {advancedquery3CRUD}>Advanced Query 3</button><br></br><br></br>
+        <button onClick = {intermediatenewtable}>Intermediate NewTable</button>
+        <button onClick = {intermediatesoytable}>Intermediate SoyTable</button>
+        <button onClick = {intermediatemilktable}>Intermediate MilkTable</button>
+
       </div>
 
-      <div>
-        <h1> SEARCH fields below </h1>
+      <div style = {divStyle}>
+        <h1> Search by Restaurant Name</h1>
         <label>Restaurant Name to search by:</label>
         <input type = "text" name = "query" onChange={(e) => {
           setquery(e.target.value);
@@ -250,6 +347,9 @@ function App() {
            </div>
         ))}
         
+        </div>
+        <div id="intermediateDiv">
+          
         </div>
       </div>
     </div>

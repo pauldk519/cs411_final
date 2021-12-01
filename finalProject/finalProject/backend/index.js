@@ -106,6 +106,30 @@ app.get("/api/advq3", (require, response) => {
   });
 });
 
+app.get("/api/newtable", (require, response) => {
+
+  const sqlSelect = `SELECT * FROM NewTable`;
+  db.query(sqlSelect, (err, result) => {
+      response.send(result);
+  });
+});
+
+app.get("/api/soytable", (require, response) => {
+
+  const sqlSelect = `SELECT * FROM SoyTable`;
+  db.query(sqlSelect, (err, result) => {
+      response.send(result);
+  });
+});
+
+app.get("/api/milktable", (require, response) => {
+
+  const sqlSelect = `SELECT * FROM MilkTable`;
+  db.query(sqlSelect, (err, result) => {
+      response.send(result);
+  });
+});
+
 app.listen(3002, () => {
     console.log("running on port 3002");
 })
