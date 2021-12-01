@@ -1,0 +1,21 @@
+.border {
+    border-bottom: 1px dashed red;
+    padding: 20px;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+.borderAlternate {
+    border-bottom: 3px dotted teal;
+    padding: 20px;
+}

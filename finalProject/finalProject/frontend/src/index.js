@@ -5,7 +5,7 @@ import Insert from './Insert';
 
 ReactDOM.render(
   <App />,
-  <Insert />,
+  //<Insert />,
   document.getElementById('root')
 );
 

@@ -108,7 +108,12 @@ function App() {
 
   return (
     <div className = "App">
-      <h1>CRUD Applications</h1>
+      <div>
+        <body style="font-family:verdana">
+        <h1>Peanut Table</h1>
+        </body>
+      </div>
+      {/* <h1>CRUD Applications</h1> */}
       <h1>INSERT and DELETE below</h1>
 
       <div className = "Form">

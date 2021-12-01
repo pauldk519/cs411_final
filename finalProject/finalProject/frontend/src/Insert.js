@@ -45,9 +45,6 @@ function Insert() {
   };
 
   return(
-
-    <!DOCTYPE html>
-
     <div className = "Form">
         <label>Restaurant Name:</label>
 
@@ -60,9 +57,7 @@ function Insert() {
         setrestaurantLocation(e.target.value);
         } }/>
         <button onClick={insertCRUD}>INSERT</button>
-    </div>
-    
-    </html>
+    </div>    
   )
 }
 
