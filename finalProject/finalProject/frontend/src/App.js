@@ -393,7 +393,7 @@ function App() {
         <div id="newTableDiv">
         {search && search.map((tuples, index) => (
           <div key = {index}>
-           <p>Food Name: {tuples.FoodName}</p>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
            </div>
         ))}
 
@@ -401,7 +401,7 @@ function App() {
         <div id="soyDiv">
         {search && search.map((tuples, index) => (
           <div key = {index}>
-           <p>Restaurant Name: {tuples.RestaurantName}</p>
+           <p>Food Name: {tuples.FoodName}</p>
            </div>
         ))}
 
