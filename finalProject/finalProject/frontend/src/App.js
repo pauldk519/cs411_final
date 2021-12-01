@@ -189,7 +189,7 @@ function App() {
     var a = document.getElementById("soyDiv");
     var b = document.getElementById("milkDiv");
     var c = document.getElementById("newTableDiv");
-    if (a.style.display === "none") {
+    if (c.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
@@ -256,7 +256,7 @@ function App() {
     var a = document.getElementById("soyDiv");
     var b = document.getElementById("milkDiv");
     var c = document.getElementById("newTableDiv");
-    if (a.style.display === "none") {
+    if (b.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
