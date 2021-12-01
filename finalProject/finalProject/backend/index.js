@@ -110,6 +110,7 @@ app.get("/api/newtable", (require, response) => {
 
   const sqlSelect = `SELECT * FROM NewTable`;
   db.query(sqlSelect, (err, result) => {
+      console.log(result)
       response.send(result);
   });
 });
@@ -118,6 +119,7 @@ app.get("/api/soytable", (require, response) => {
 
   const sqlSelect = `SELECT * FROM SoyTable`;
   db.query(sqlSelect, (err, result) => {
+      console.log(result)
       response.send(result);
   });
 });
@@ -126,6 +128,7 @@ app.get("/api/milktable", (require, response) => {
 
   const sqlSelect = `SELECT * FROM MilkTable`;
   db.query(sqlSelect, (err, result) => {
+      console.log(result)
       response.send(result);
   });
 });
