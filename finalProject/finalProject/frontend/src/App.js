@@ -50,14 +50,17 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var w = document.getElementById("aq3Div");
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
     if (z.style.display === "none") {
+        w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
     } else {
+        w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         // z.style.display = "none";
@@ -70,14 +73,17 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var w = document.getElementById("aq3Div");
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
     if (y.style.display === "none") {
+        w.style.display = "none";
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
     } else {
+        w.style.display = "none";
         x.style.display = "none";
         // y.style.display = "none";
         z.style.display = "none";
@@ -90,15 +96,41 @@ function App() {
       setSearch(response.data)
       console.log(search)
     })
+    var w = document.getElementById("aq3Div");
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
     if (x.style.display === "none") {
+        w.style.display = "none";
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
     } else {
+        w.style.display = "none";
         // x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+  };
+  
+    const advancedquery3CRUD = () => {
+    console.log("Running advanced query 3")
+    Axios.get('http://localhost:3002/api/advq3').then((response) => {
+      setSearch(response.data)
+      console.log(search)
+    })
+    var w = document.getElementById("aq3Div");
+    var x = document.getElementById("aq2Div");
+    var y = document.getElementById("aq1Div");
+    var z = document.getElementById("searchDiv");
+    if (w.style.display === "none") {
+        w.style.display = "block";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    } else {
+        // w.style.display = "none";
+        x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
     }
@@ -206,6 +238,12 @@ function App() {
         {search && search.map((tuples, index) => (
           <div key = {index}>
            <p>Food Name: {tuples.FoodName}</p>
+           </div>
+        ))}
+        <div id="aq3Div">
+        {search && search.map((tuples, index) => (
+          <div key = {index}>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
            </div>
         ))}
         </div>
