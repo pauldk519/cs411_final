@@ -54,19 +54,25 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (z.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     } else {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         // z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     }
   };
 
@@ -80,19 +86,25 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (y.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     } else {
         w.style.display = "none";
         x.style.display = "none";
         // y.style.display = "none";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     }
   };
 
@@ -106,22 +118,28 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (x.style.display === "none") {
         w.style.display = "none";
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     } else {
         w.style.display = "none";
         // x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     }
   };
-  
+
   const advancedquery3CRUD = () => {
     console.log("Running advanced query 3")
     Axios.get('http://localhost:3002/api/advq3').then((response) => {
@@ -132,13 +150,17 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (w.style.display === "none") {
         w.style.display = "block";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
 
     } else {
         // w.style.display = "none";
@@ -146,6 +168,8 @@ function App() {
         y.style.display = "none";
         z.style.display = "none";
         a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     }
   };
 
@@ -159,19 +183,25 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (a.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
-        a.style.display = "block";
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "block";
 
     } else {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
+        b.style.display = "none";
     }
 
   }
@@ -186,19 +216,25 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (a.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
         a.style.display = "block";
+        b.style.display = "none";
+        c.style.display = "none";
 
     } else {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
     }
 
   }
@@ -212,19 +248,25 @@ function App() {
     var x = document.getElementById("aq2Div");
     var y = document.getElementById("aq1Div");
     var z = document.getElementById("searchDiv");
-    var a = document.getElementById("intermediateDiv")
+    var a = document.getElementById("soyDiv");
+    var b = document.getElementById("milkDiv");
+    var c = document.getElementById("newTableDiv");
     if (a.style.display === "none") {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
-        a.style.display = "block";
+        a.style.display = "none";
+        b.style.display = "block";
+        c.style.display = "none";
 
     } else {
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
+        c.style.display = "none";
     }
 
   }
@@ -346,10 +388,31 @@ function App() {
            <p>Restaurant Name: {tuples.RestaurantName}</p>
            </div>
         ))}
-        
+
         </div>
-        <div id="intermediateDiv">
-          
+        <div id="newTableDiv">
+        {search && search.map((tuples, index) => (
+          <div key = {index}>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
+           </div>
+        ))}
+
+        </div>
+        <div id="soyDiv">
+        {search && search.map((tuples, index) => (
+          <div key = {index}>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
+           </div>
+        ))}
+
+        </div>
+        <div id="milkDiv">
+        {search && search.map((tuples, index) => (
+          <div key = {index}>
+           <p>Restaurant Name: {tuples.RestaurantName}</p>
+           </div>
+        ))}
+
         </div>
       </div>
     </div>
