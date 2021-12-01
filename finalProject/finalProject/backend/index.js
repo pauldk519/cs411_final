@@ -99,7 +99,7 @@ app.get("/api/advq2", (require, response) => {
 app.get("/api/advq3", (require, response) => {
 
   const sqlSelect = `SELECT DISTINCT RestaurantName FROM Restaurant
-    WHERE RestaurantName NOT IN 
+    WHERE RestaurantName NOT IN
     (SELECT RestaurantName FROM Restaurant NATURAL JOIN Food NATURAL JOIN Contains NATURAL JOIN IsAllergen);`;
   db.query(sqlSelect, (err, result) => {
       response.send(result);
@@ -117,7 +117,7 @@ app.get("/api/newtable", (require, response) => {
 
 app.get("/api/soytable", (require, response) => {
 
-  const sqlSelect = `SELECT * FROM SoyTable`;
+  const sqlSelect = `SELECT * FROM soyTable`;
   db.query(sqlSelect, (err, result) => {
       console.log(result)
       response.send(result);
@@ -126,7 +126,7 @@ app.get("/api/soytable", (require, response) => {
 
 app.get("/api/milktable", (require, response) => {
 
-  const sqlSelect = `SELECT * FROM MilkTable`;
+  const sqlSelect = `SELECT * FROM milkTable`;
   db.query(sqlSelect, (err, result) => {
       console.log(result)
       response.send(result);

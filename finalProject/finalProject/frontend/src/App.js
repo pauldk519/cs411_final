@@ -22,6 +22,9 @@ function App() {
   const [foodName, setfoodName] = useState('');
   const [ingredientName, setingredientName] = useState('');
   const [price, setprice] = useState('');
+  const [nt, setNt] = useState(null);
+  const [st, setSt] = useState(null);
+  const [mt, setMt] = useState(null);
 
   const insertCRUD = () => {
      Axios.post('http://localhost:3002/api/insert', {
@@ -176,7 +179,7 @@ function App() {
   const intermediatenewtable = () => {
     console.log("Getting intermediate NewTable")
     Axios.get('http://localhost:3002/api/newtable').then((response) => {
-      setSearch(response.data)
+      setNt(response.data)
       console.log(search)
     })
     var w = document.getElementById("aq3Div");
@@ -209,7 +212,9 @@ function App() {
   const intermediatesoytable = () => {
     console.log("Getting intermediate SoyTable")
     Axios.get('http://localhost:3002/api/soytable').then((response) => {
-      setSearch(response.data)
+      console.log(response)
+      console.log(response.data)
+      setSt(response.data)
       console.log(search)
     })
     var w = document.getElementById("aq3Div");
@@ -241,7 +246,7 @@ function App() {
   const intermediatemilktable = () => {
     console.log("Getting intermediate MilkTable")
     Axios.get('http://localhost:3002/api/milktable').then((response) => {
-      setSearch(response.data)
+      setMt(response.data)
       console.log(search)
     })
     var w = document.getElementById("aq3Div");
@@ -391,7 +396,7 @@ function App() {
 
         </div>
         <div id="newTableDiv">
-        {search && search.map((tuples, index) => (
+        {nt && nt.map((tuples, index) => (
           <div key = {index}>
            <p>Restaurant Name: {tuples.RestaurantName}</p>
            </div>
@@ -399,7 +404,7 @@ function App() {
 
         </div>
         <div id="soyDiv">
-        {search && search.map((tuples, index) => (
+        {st && st.map((tuples, index) => (
           <div key = {index}>
            <p>Food Name: {tuples.FoodName}</p>
            </div>
@@ -407,7 +412,7 @@ function App() {
 
         </div>
         <div id="milkDiv">
-        {search && search.map((tuples, index) => (
+        {mt && mt.map((tuples, index) => (
           <div key = {index}>
            <p>Food Name: {tuples.FoodName}</p>
            </div>
