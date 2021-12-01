@@ -96,6 +96,16 @@ app.get("/api/advq2", (require, response) => {
   });
 });
 
+app.get("/api/advq3", (require, response) => {
+
+  const sqlSelect = `SELECT DISTINCT RestaurantName FROM Restaurant
+    WHERE RestaurantName NOT IN 
+    (SELECT RestaurantName FROM Restaurant NATURAL JOIN Food NATURAL JOIN Contains NATURAL JOIN IsAllergen);`;
+  db.query(sqlSelect, (err, result) => {
+      response.send(result);
+  });
+});
+
 app.listen(3002, () => {
     console.log("running on port 3002");
 })
